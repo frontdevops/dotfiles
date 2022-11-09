@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Start an HTTP server from a directory, optionally specifying the port (default: 8000)
+#
+# Usage:
+#   server [port]
+
+port="${1:-8000}"
+myip=$(ifconfig | grep "inet " | grep -v "127.0.0.1" | awk '{print $2}')
+
+echo "Access from the network: $myip"
+
+open "http://127.0.0.1:${port}/" &
+
+
+if command -v python3 &> /dev/null
+then
+  python3 -m http.server $port --bind "127.0.0.1"
+else
+  if command -v php &> /dev/null
+  then
+    php -S "127.0.0.1:$port" -t .
+  fi
+fi
+
+#EOF#

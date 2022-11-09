@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Print public SSH key, generate it if necessary
+
+file=~/.ssh/id_rsa.pub
+
+if [ ! -f "$file" ]
+then
+  echo -e "File not exists. Create new...\n"
+  ssh-keygen -t rsa
+fi
+
+cat "$file"
+echo -e "\n"
+
+if command -v pbcopy &> /dev/null
+then
+  # Print to clipboard
+  cat "$file" | pbcopy
+  echo "💾 Copied to clipboard"
+fi
+
+#EOF#

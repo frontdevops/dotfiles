@@ -1,0 +1,16 @@
+node_modules/
+*.cache
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.log
+.eslintcache
+vscode/User/workspaceStorage/
+vscode/User/History/
+vscode/User/globalStorage/state.vscdb
+vscode/User/globalStorage/state.vscdb.backup
+vscode/User/globalStorage/storage.json
+vscode/User/globalStorage/vscode.json-language-features/json-schema-cache/

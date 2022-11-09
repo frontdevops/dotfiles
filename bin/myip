@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Print my IP
+#
+# Author: Alexaner Majorov
+# License: MIT
+# https://github.com/frontdevops/dotfiles
+
+ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{print $2}'
