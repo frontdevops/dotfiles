@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# GUI CLI library
+# GUI CLI library for MacOS
 # Set of different functions to call a GUI elements from the terminal
+# Based on AppleScript calls
 #
 # Author: Alexaner Majorov
 # License: MIT
